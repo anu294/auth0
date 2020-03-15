@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
+import Signup from './signup'
 
 function Home() {
   const { user, loading } = useFetchUser()
@@ -30,6 +31,7 @@ function Home() {
           <img src={user.picture} alt="user picture" />
           <p>nickname: {user.nickname}</p>
           <p>name: {user.name}</p>
+          <Signup></Signup>
         </>
       )}
     </Layout>

@@ -13,5 +13,7 @@ module.exports = {
       process.env.POST_LOGOUT_REDIRECT_URI || 'http://localhost:3000/',
     SESSION_COOKIE_SECRET: process.env.SESSION_COOKIE_SECRET,
     SESSION_COOKIE_LIFETIME: 7200, // 2 hours
+    // Set the fauna server key in the .env file and make it available at Build Time.
+    FAUNA_SERVER_KEY: process.env.FAUNA_SERVER_KEY,
   },
 }

@@ -1,12 +1,12 @@
 {
   "build": {
     "env": {
-      "AUTH0_DOMAIN": "YOUR_AUTH0_DOMAIN",
-      "AUTH0_CLIENT_ID": "YOUR_AUTH0_CLIENT_ID",
-      "AUTH0_CLIENT_SECRET": "@auth0_client_secret",
-      "REDIRECT_URI": "https://my-website.now.sh/api/callback",
-      "POST_LOGOUT_REDIRECT_URI": "https://my-website.now.sh/",
-      "SESSION_COOKIE_SECRET": "@session_cookie_secret"
+      "AUTH0_DOMAIN": "dev-b2xpl3r0.auth0.com",
+      "AUTH0_CLIENT_ID": "gpTVRqN5XRPl38GtozN4HlUMlYJSsqDk",
+      "AUTH0_CLIENT_SECRET": "h5-z16g8yTwb7DNx2PxQs9iJkk7y4P9VZQ7l9U-pJYuvKbC0VOAo37WzN8p6q62O",
+      "REDIRECT_URI": "https://myapp.com/api/callback",
+      "POST_LOGOUT_REDIRECT_URI": "https://myapp.com/",
+      "SESSION_COOKIE_SECRET": "38e3a837428dd017f1dad8c73e462fa7"
     }
   }
 }

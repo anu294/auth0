@@ -8,28 +8,9 @@ export default async (req, res) => {
     if (!email || !password) {
       throw new Error('Email and password must be provided.')
     }
-    console.log(`email: ${email} trying to create user.`)
-
-    let user
-    let user1="anu.294@gmail.com"
-    try {
-      user = await serverClient.query(
-        q.Create(q.Collection('Tweets'), {//Change from User
-          credentials: { password },
-          data: { email, user1 },
-        })
-      )
-    } catch (error) {
-      console.error('Fauna create user error:', error)
-      throw new Error('User already exists.')
-    }
-
-    if (!user.ref) {
-      throw new Error('No ref present in create query response.')
-    }
 
     const loginRes = await serverClient.query(
-      q.Login(user.ref, {
+      q.Login(q.Match(q.Index('users_by_email'), email), {
         password,
       })
     )

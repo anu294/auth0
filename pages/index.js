@@ -3,11 +3,14 @@ import React from 'react'
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
 import Signup from './signup'
+import HomePage from '../components/HomePage';
+
 
 function Home() {
   const { user, loading } = useFetchUser()
 
   return (
+    <div>
     <Layout user={user} loading={loading}>
       <h1>Next.js and Auth0 Example</h1>
 
@@ -35,6 +38,8 @@ function Home() {
         </>
       )}
     </Layout>
+    <HomePage/>
+    </div>
   )
 }
 

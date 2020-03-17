@@ -12,11 +12,12 @@ export default async (req, res) => {
 
     let user
     let user1="anu.294@gmail.com"
+    let folwrCount1="0"
     try {
       user = await serverClient.query(
         q.Create(q.Collection('Tweets'), {//Change from User
           credentials: { password },
-          data: { email, user1 },
+          data: { email, user1 , folwrCount1},
         })
       )
     } catch (error) {
